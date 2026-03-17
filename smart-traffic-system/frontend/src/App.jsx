@@ -10,6 +10,7 @@ import LiveFeed from "./components/LiveFeed";
 import ModelFeed from "./components/ModelFeed";
 import { useWebSocket } from "./hooks/useWebSocket";
 import { fetchIntersections, simulateEmergency, uploadVideo } from "./api/trafficApi";
+import { apiUrl } from "./config";
 
 // ── Bengaluru intersections (fallback if API fails) ───────────────────────────
 const DEFAULT_INTERSECTIONS = [
@@ -87,7 +88,7 @@ function UploadVideoButton() {
 
     try {
       await axios.post(
-        "http://localhost:8000/api/traffic/video/upload",
+        apiUrl("/api/traffic/video/upload"),
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -115,7 +116,7 @@ function UploadVideoButton() {
     pollRef.current = setInterval(async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/traffic/video/status"
+          apiUrl("/api/traffic/video/status")
         );
         const data = res.data;
         setMessage(data.message);
@@ -659,4 +660,3 @@ function DensityGauges({ densityData }) {
     </div>
   );
 }
-

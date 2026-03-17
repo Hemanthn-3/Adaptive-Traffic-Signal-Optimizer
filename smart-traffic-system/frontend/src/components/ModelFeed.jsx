@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { apiUrl } from "../config"
 
 export default function ModelFeed() {
   const [isLive, setIsLive] = useState(false)
@@ -58,7 +59,7 @@ export default function ModelFeed() {
       {/* ── Video / Fallback ──────────────────────────────────────────── */}
       {!error ? (
         <img
-          src="http://localhost:8000/api/traffic/video/stream"
+          src={apiUrl("/api/traffic/video/stream")}
           alt="YOLOv8 Vehicle Detection"
           onError={() => { setError(true); setIsLive(false); }}
           onLoad={() => setIsLive(true)}

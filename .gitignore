@@ -1,0 +1,8 @@
+smart-traffic-system/frontend/node_modules/
+smart-traffic-system/frontend/dist/
+smart-traffic-system/backend/.render_test_venv/
+smart-traffic-system/backend/.venv/
+smart-traffic-system/backend/__pycache__/
+smart-traffic-system/backend/.pytest_cache/
+smart-traffic-system/**/__pycache__/
+*.pyc

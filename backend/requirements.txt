@@ -1,32 +1,33 @@
-# ─── Web Framework ────────────────────────────────────────────────────────────
+# ─── Web Framework ─────────────────────
 fastapi
 uvicorn[standard]
 python-multipart
 websockets
 
-# ─── Database ─────────────────────────────────────────────────────────────────
+# ─── Database ──────────────────────────
 sqlalchemy[asyncio]
 asyncpg
 alembic
 
-# ─── Cache ────────────────────────────────────────────────────────────────────
+# ─── Cache ─────────────────────────────
 redis[hiredis]
 
-# ─── MQTT ─────────────────────────────────────────────────────────────────────
+# ─── MQTT ──────────────────────────────
 paho-mqtt
 
-# ─── ML / Computer Vision ─────────────────────────────────────────────────────
-ultralytics
-opencv-python-headless
-numpydeep-sort-realtime
-# ─── Config & Utilities ───────────────────────────────────────────────────────
+# ─── Basic ML (light only for now) ─────
+numpy
+
+# ─── Config & Utilities ────────────────
 python-dotenv
 pydantic
 pydantic-settings
 httpx
 python-jose[cryptography]
-passlib[bcrypt]setuptools
-# ─── Testing ──────────────────────────────────────────────────────────────────
+passlib[bcrypt]
+setuptools
+
+# ─── Testing (optional) ────────────────
 pytest
 pytest-asyncio
 anyio

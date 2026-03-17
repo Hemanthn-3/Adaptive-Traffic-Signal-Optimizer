@@ -1,0 +1,32 @@
+# ─── Web Framework ────────────────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+python-multipart
+websockets
+
+# ─── Database ─────────────────────────────────────────────────────────────────
+sqlalchemy[asyncio]
+asyncpg
+alembic
+
+# ─── Cache ────────────────────────────────────────────────────────────────────
+redis[hiredis]
+
+# ─── MQTT ─────────────────────────────────────────────────────────────────────
+paho-mqtt
+
+# ─── ML / Computer Vision ─────────────────────────────────────────────────────
+ultralytics
+opencv-python-headless
+numpydeep-sort-realtime
+# ─── Config & Utilities ───────────────────────────────────────────────────────
+python-dotenv
+pydantic
+pydantic-settings
+httpx
+python-jose[cryptography]
+passlib[bcrypt]setuptools
+# ─── Testing ──────────────────────────────────────────────────────────────────
+pytest
+pytest-asyncio
+anyio
